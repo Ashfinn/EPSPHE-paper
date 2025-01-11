@@ -1,0 +1,7 @@
+# This file is used internally by FFMPEG.
+file 'file:F:/Projects/EPSPHE-paper/media/videos/student_performance_video/480p15/partial_movie_files/Results/1185818338_1287262423_223132457.mp4'
+file 'file:F:/Projects/EPSPHE-paper/media/videos/student_performance_video/480p15/partial_movie_files/Results/624642324_3890345977_3115853010.mp4'
+file 'file:F:/Projects/EPSPHE-paper/media/videos/student_performance_video/480p15/partial_movie_files/Results/624642324_606240572_2875763672.mp4'
+file 'file:F:/Projects/EPSPHE-paper/media/videos/student_performance_video/480p15/partial_movie_files/Results/624642324_669993404_892818167.mp4'
+file 'file:F:/Projects/EPSPHE-paper/media/videos/student_performance_video/480p15/partial_movie_files/Results/624642324_1843379742_3018943729.mp4'
+file 'file:F:/Projects/EPSPHE-paper/media/videos/student_performance_video/480p15/partial_movie_files/Results/624642324_1141282389_3856409308.mp4'

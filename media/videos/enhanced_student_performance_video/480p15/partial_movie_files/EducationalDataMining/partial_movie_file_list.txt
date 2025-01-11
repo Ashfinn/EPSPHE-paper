@@ -1,0 +1,9 @@
+# This file is used internally by FFMPEG.
+file 'file:F:/Projects/EPSPHE-paper/media/videos/enhanced_student_performance_video/480p15/partial_movie_files/EducationalDataMining/1185818338_1170924000_223132457.mp4'
+file 'file:F:/Projects/EPSPHE-paper/media/videos/enhanced_student_performance_video/480p15/partial_movie_files/EducationalDataMining/624642324_3890345977_1315661976.mp4'
+file 'file:F:/Projects/EPSPHE-paper/media/videos/enhanced_student_performance_video/480p15/partial_movie_files/EducationalDataMining/624642324_2627418258_2992460514.mp4'
+file 'file:F:/Projects/EPSPHE-paper/media/videos/enhanced_student_performance_video/480p15/partial_movie_files/EducationalDataMining/624642324_2745847499_3039949220.mp4'
+file 'file:F:/Projects/EPSPHE-paper/media/videos/enhanced_student_performance_video/480p15/partial_movie_files/EducationalDataMining/624642324_3295613531_2057828673.mp4'
+file 'file:F:/Projects/EPSPHE-paper/media/videos/enhanced_student_performance_video/480p15/partial_movie_files/EducationalDataMining/624642324_3890345977_986176061.mp4'
+file 'file:F:/Projects/EPSPHE-paper/media/videos/enhanced_student_performance_video/480p15/partial_movie_files/EducationalDataMining/624642324_975160350_3834772498.mp4'
+file 'file:F:/Projects/EPSPHE-paper/media/videos/enhanced_student_performance_video/480p15/partial_movie_files/EducationalDataMining/624642324_1141282389_2668881711.mp4'
