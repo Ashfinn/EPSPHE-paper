@@ -1,6 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:F:/Projects/EPSPHE-paper/media/videos/student_performance_video/480p15/partial_movie_files/PredictiveFramework/1185818338_302963118_223132457.mp4'
-file 'file:F:/Projects/EPSPHE-paper/media/videos/student_performance_video/480p15/partial_movie_files/PredictiveFramework/624642324_3890345977_2408981346.mp4'
-file 'file:F:/Projects/EPSPHE-paper/media/videos/student_performance_video/480p15/partial_movie_files/PredictiveFramework/624642324_4119369273_1171865508.mp4'
-file 'file:F:/Projects/EPSPHE-paper/media/videos/student_performance_video/480p15/partial_movie_files/PredictiveFramework/624642324_3390593055_1841341753.mp4'
-file 'file:F:/Projects/EPSPHE-paper/media/videos/student_performance_video/480p15/partial_movie_files/PredictiveFramework/624642324_2475379470_1706658355.mp4'

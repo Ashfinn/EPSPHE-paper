@@ -1,7 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:F:/Projects/EPSPHE-paper/media/videos/claude_student_performance_video/480p15/partial_movie_files/StudentScenario/1185818338_1252509194_223132457.mp4'
-file 'file:F:/Projects/EPSPHE-paper/media/videos/claude_student_performance_video/480p15/partial_movie_files/StudentScenario/624642324_4108662547_4143675627.mp4'
-file 'file:F:/Projects/EPSPHE-paper/media/videos/claude_student_performance_video/480p15/partial_movie_files/StudentScenario/624642324_4220184831_196610205.mp4'
-file 'file:F:/Projects/EPSPHE-paper/media/videos/claude_student_performance_video/480p15/partial_movie_files/StudentScenario/624642324_1006937130_2927003657.mp4'
-file 'file:F:/Projects/EPSPHE-paper/media/videos/claude_student_performance_video/480p15/partial_movie_files/StudentScenario/624642324_724928226_3419169683.mp4'
-file 'file:F:/Projects/EPSPHE-paper/media/videos/claude_student_performance_video/480p15/partial_movie_files/StudentScenario/624642324_1141282389_965709307.mp4'

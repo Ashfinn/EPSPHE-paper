@@ -1,9 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:F:/Projects/EPSPHE-paper/media/videos/claude_student_performance_video/480p15/partial_movie_files/PredictiveFramework/1185818338_3362390690_223132457.mp4'
-file 'file:F:/Projects/EPSPHE-paper/media/videos/claude_student_performance_video/480p15/partial_movie_files/PredictiveFramework/624642324_2260985960_3360642193.mp4'
-file 'file:F:/Projects/EPSPHE-paper/media/videos/claude_student_performance_video/480p15/partial_movie_files/PredictiveFramework/624642324_1750640637_209666955.mp4'
-file 'file:F:/Projects/EPSPHE-paper/media/videos/claude_student_performance_video/480p15/partial_movie_files/PredictiveFramework/624642324_858287841_2023731677.mp4'
-file 'file:F:/Projects/EPSPHE-paper/media/videos/claude_student_performance_video/480p15/partial_movie_files/PredictiveFramework/624642324_2878793253_2023731677.mp4'
-file 'file:F:/Projects/EPSPHE-paper/media/videos/claude_student_performance_video/480p15/partial_movie_files/PredictiveFramework/624642324_1781183547_2023731677.mp4'
-file 'file:F:/Projects/EPSPHE-paper/media/videos/claude_student_performance_video/480p15/partial_movie_files/PredictiveFramework/624642324_3336023007_2023731677.mp4'
-file 'file:F:/Projects/EPSPHE-paper/media/videos/claude_student_performance_video/480p15/partial_movie_files/PredictiveFramework/624642324_1141282389_1680488728.mp4'

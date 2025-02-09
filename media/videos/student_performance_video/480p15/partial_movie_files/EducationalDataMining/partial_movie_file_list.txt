@@ -1,6 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:F:/Projects/EPSPHE-paper/media/videos/student_performance_video/480p15/partial_movie_files/EducationalDataMining/1185818338_2847092083_223132457.mp4'
-file 'file:F:/Projects/EPSPHE-paper/media/videos/student_performance_video/480p15/partial_movie_files/EducationalDataMining/624642324_3890345977_1668707084.mp4'
-file 'file:F:/Projects/EPSPHE-paper/media/videos/student_performance_video/480p15/partial_movie_files/EducationalDataMining/624642324_3152165177_2306896735.mp4'
-file 'file:F:/Projects/EPSPHE-paper/media/videos/student_performance_video/480p15/partial_movie_files/EducationalDataMining/624642324_3003715649_3733122265.mp4'
-file 'file:F:/Projects/EPSPHE-paper/media/videos/student_performance_video/480p15/partial_movie_files/EducationalDataMining/624642324_1141282389_3184654035.mp4'

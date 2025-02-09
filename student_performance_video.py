@@ -1,111 +1,124 @@
 from manim import *
 import numpy as np
 
-
-class IntroScene(Scene):
+class LinearRegressionScene(Scene):
     def construct(self):
-        title = Text("Predicting Student Performance", font_size=60, color=YELLOW)
-        subtitle = Text("Using Data Mining & Machine Learning", font_size=36, color=BLUE)
-        group = VGroup(title, subtitle).arrange(DOWN)
-        self.play(Write(group))
-        self.wait(2)
-        self.play(FadeOut(group))
-
-
-class EducationalDataMining(Scene):
-    def construct(self):
-        title = Text("Educational Data Mining", font_size=48)
+        # Scene 1: Title and Introduction
+        title = Text("Exploring Linear Regression")
         self.play(Write(title))
-        self.wait(1)
-        self.play(title.animate.to_edge(UP))
+        self.wait()
+        self.play(title.animate.scale(0.8).to_edge(UP))
 
-        flowchart = VGroup(
-            Text("Raw Data").scale(0.6).set_color(RED),
-            Arrow(ORIGIN, RIGHT),
-            Text("Preprocessing").scale(0.6).set_color(GREEN),
-            Arrow(ORIGIN, RIGHT),
-            Text("Analysis").scale(0.6).set_color(YELLOW),
-            Arrow(ORIGIN, RIGHT),
-            Text("Insights").scale(0.6).set_color(BLUE),
-        ).arrange(RIGHT, buff=0.5)
+        # Create axes and store as instance variables
+        axes_group = self.create_axes()
+        self.axes = axes_group[0]  # Store the actual axes object
+        self.play(Create(axes_group))
+        
+        # Scene 2: Generate and plot data points
+        data_points = self.create_data_points()
+        self.play(*[Create(dot) for dot in data_points])
+        self.wait()
 
-        self.play(Create(flowchart))
-        self.wait(2)
+        # Scene 3: Show the linear equation
+        equation = self.create_equation()
+        self.play(Write(equation))
+        self.wait()
+        self.play(equation.animate.to_edge(UP).shift(DOWN))
 
+        # Scene 4: Fit line animation
+        line = self.create_fit_line()
+        self.play(Create(line))
+        
+        # Scene 5: Cost function visualization
+        cost_function = self.create_cost_visualization()
+        self.play(
+            *[Create(element) for element in cost_function],
+            run_time=2
+        )
+        self.wait()
 
-class PredictiveFramework(Scene):
-    def construct(self):
-        title = Text("Predictive Framework", font_size=48)
-        self.play(Write(title))
-        self.wait(1)
-        self.play(title.animate.to_edge(UP))
-
-        inputs = VGroup(
-            Text("Admission Scores").scale(0.5),
-            Text("Course Grades").scale(0.5),
-            Text("AAT/GAT Scores").scale(0.5),
-        ).arrange(DOWN, buff=0.5)
-
-        outputs = VGroup(
-            Text("Predicted GPA").scale(0.5),
-            Text("Risk Level").scale(0.5),
-        ).arrange(DOWN, buff=0.5)
-
-        framework = VGroup(
-            inputs,
-            Arrow(ORIGIN, RIGHT),
-            Text("Machine Learning").scale(0.6).set_color(YELLOW),
-            Arrow(ORIGIN, RIGHT),
-            outputs,
-        ).arrange(RIGHT, buff=1)
-
-        self.play(Create(framework))
-        self.wait(3)
-
-
-class Methodology(Scene):
-    def construct(self):
-        title = Text("Methodology", font_size=48)
-        self.play(Write(title))
-        self.wait(1)
-        self.play(title.animate.to_edge(UP))
-
-        clustering = Text("t-SNE Clustering", font_size=36).shift(LEFT * 3)
-        classification = Text("Classification Models", font_size=36).shift(RIGHT * 3)
-        arrow = Arrow(LEFT, RIGHT).scale(1.5)
-
-        self.play(Write(clustering), Write(classification), Create(arrow))
+        # Scene 6: Gradient descent
+        gradient_path = self.create_gradient_descent()
+        self.play(MoveAlongPath(gradient_path[0], gradient_path[1]))
         self.wait(2)
 
+    def create_axes(self):
+        axes = Axes(
+            x_range=[0, 6, 1],
+            y_range=[0, 90, 10],
+            axis_config={
+                "stroke_width": 2,
+                "include_ticks": True,
+                "include_tip": True,
+            },
+            x_axis_config={"label_direction": DOWN},
+            y_axis_config={"label_direction": LEFT}
+        )
+        labels = axes.get_axis_labels(x_label="x", y_label="y")
+        return VGroup(axes, labels)
 
-class Results(Scene):
-    def construct(self):
-        title = Text("Results & Discussion", font_size=48)
-        self.play(Write(title))
-        self.wait(1)
-        self.play(title.animate.to_edge(UP))
+    def create_data_points(self):
+        # Generate synthetic data points with some noise
+        x_vals = np.linspace(0, 5, 10)
+        y_vals = 15 * x_vals + 20 + np.random.normal(0, 5, 10)
+        
+        dots = VGroup(*[
+            Dot(self.axes.c2p(x, y), color=BLUE)
+            for x, y in zip(x_vals, y_vals)
+        ])
+        return dots
 
-        axes = Axes(x_range=[0, 10, 1], y_range=[0, 1, 0.1], x_length=7, y_length=5)
-        labels = axes.get_axis_labels("Model", "Accuracy")
-        graph = axes.plot(lambda x: 0.6 + 0.3 * np.exp(-0.2 * x), x_range=[0, 10], color=BLUE)
+    def create_equation(self):
+        equation = MathTex(
+            "y", "=", "m", "x", "+", "b",
+            substrings_to_isolate=["y", "m", "x", "b"]
+        )
+        equation.set_color_by_tex_to_color_map({
+            "m": BLUE,
+            "b": RED
+        })
+        return equation
 
-        self.play(Create(axes), Write(labels))
-        self.play(Create(graph))
-        self.wait(2)
+    def create_fit_line(self):
+        line = Line(
+            start=self.axes.c2p(0, 20),
+            end=self.axes.c2p(5, 95),
+            color=YELLOW
+        )
+        return line
 
+    def create_cost_visualization(self):
+        # Create a smaller coordinate system for cost function
+        cost_axes = Axes(
+            x_range=[-2, 6],
+            y_range=[0, 10],
+            x_length=3,
+            y_length=2,
+        ).to_corner(DR)
+        
+        # Create the cost function graph
+        cost_graph = cost_axes.plot(
+            lambda x: 0.1 * (x - 2) ** 2 + 1,
+            x_range=[-2, 6],
+            color=GREEN
+        )
+        
+        cost_label = Text("Cost Function", font_size=24).next_to(cost_axes, UP)
+        return VGroup(cost_axes, cost_graph, cost_label)
 
-class Conclusion(Scene):
-    def construct(self):
-        title = Text("Conclusion", font_size=48, color=GREEN)
-        self.play(Write(title))
-        self.wait(1)
-        self.play(title.animate.to_edge(UP))
+    def create_gradient_descent(self):
+        # Create a point and path for gradient descent visualization
+        point = Dot(color=RED)
+        
+        # Create the path on the main axes
+        path = VMobject()
+        path.set_points_smoothly([
+            self.axes.c2p(x, 15 * x + 20)  # Using the same line equation as our fit
+            for x in np.linspace(5, 2, 100)
+        ])
+        return (point, path)
 
-        points = VGroup(
-            Text("1. Early predictions reduce failure rates.", font_size=36),
-            Text("2. Machine learning improves prediction accuracy.", font_size=36),
-            Text("3. Future work involves deep learning.", font_size=36),
-        ).arrange(DOWN, buff=0.5)
-
-        self.play(Create(points))
-        self.wait(3)
+if __name__ == "__main__":
+    with tempconfig({"quality": "medium_quality", "preview": True}):
+        scene = LinearRegressionScene()
+        scene.render()
